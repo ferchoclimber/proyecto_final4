@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <title>Death dessert skateboards</title>
+    <style>
+       
+        /* General */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f1f1f1;
+            background-color: #333;
+            font-family: Arial, sans-serif;
+           
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .luckiest_guy_regular {
+ 
+         font-family: "Luckiest Guy", cursive;
+         font-weight: 400;
+         font-style: normal;
+         font-size: larger;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            padding: 5px 0px;
+            color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+        }
+        .logo {
+            flex: 1;
+            margin-left: 5px;
+
+
+        }
+      
+        nav {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+            margin: 0 10px;
+        }
+        nav a {
+            color: #f1f1f1;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #444;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            padding: 0;
+            list-style: none;
+            min-width: 160px;
+        }
+        .submenu li {
+            display: block;
+        }
+        nav li:hover .submenu {
+            display: block;
+        }
+        .search-icon {
+            flex: 1;
+            text-align: right;
+        }
+        .search-icon input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+        }
+        .search-icon button {
+            background-color: #555;
+            border: none;
+            color: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .search-icon button:hover {
+            background-color: #666;
+        }
+
+        /* Main */
+        main {
+            padding: 20px;
+        }
+        .hero {
+            text-align: center;
+            color: #f1f1f1;
+            background-color: #444;
+            padding: 40px 0;
+        }
+        .products {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product-item {
+            background-color: #555;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .product-item img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .price {
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+  background-color: rgb(58, 60, 61);
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columnas {
+  display: flex;
+}
+
+.columna {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.columna h3 {
+  color: #fff;
+}
+
+.columna ul {
+  list-style: none;
+  padding: 0;
+}
+
+.columna ul li {
+  margin-bottom: 5px;
+}
+
+.redes-sociales a {
+  color: #fff;
+
+  font-size: 24px;
+}
+
+.redes-sociales a:hover {
+  color: whitesmoke; 
+}
+/* .slider-box {
+  width: 1000px;
+  height: auto;
+  margin: 50px auto 0;
+  overflow: hidden;
+
+}
+.slider-box ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+
+}
+.slider-box li {
+  width: 100%;
+  list-style: none;
+  position: relative;
+}
+.texto {
+  position: absolute;
+  text-align: center;
+  padding: 0 250px;
+  top: 250px;
+  color: white;
+}
+.texto h2 {
+  font-size: 45px;
+  margin-bottom: 35px;
+}  */
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo, .search-icon {
+                flex: 1;
+                text-align: center;
+            }
+            nav {
+                flex: 1;
+                justify-content: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .search-icon input[type="text"] {
+                width: 80%;
+            }
+            .search-icon button {
+                margin-top: 5px;
+            }
+            .product-item {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imagenes/death.jpg" width="120" height="120" alt="Logo">
+                <a class="luckiest_guy_regular">Death Dessert Skateboards</a>
+            </div>
+            
+             <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a>
+                        <ul class="submenu">
+                            <li><a href="#">Categoría 1</a></li>
+                            <li><a href="#">Categoría 2</a></li>
+                            <li><a href="#">Categoría 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">
+                <input type="text" placeholder="Buscar...">
+                <button>&#128269;</button> <!-- Icono de búsqueda (lupa) -->
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Bienvenido a nuestra tienda</h2>
+            <p>Encuentra los mejores productos al mejor precio.</p>
+        </section>
+
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400?text=Imagen+2" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/800x400?text=Imagen+3" alt="Imagen 3">
+                </div>
+            </div>
+            <a class="carousel-control prev" href="#">&#10094;</a>
+            <a class="carousel-control next" href="#">&#10095;</a>
+        </div>
+       
+
+        <section class="products">
+            <h2>Productos Destacados</h2>
+            <div class="product-list">
+                <article class="product-item">
+                    <img src="imagenes/tabla1.webp" alt="Producto 1">
+                    <h3>Producto 1</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$19.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="imagenes/tabla 2.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="imagenes/tabla 3.jpg" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="imagenes/tabla 4.webp" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="imagenes/tabla5.webp" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <article class="product-item">
+                    <img src="https://via.placeholder.com/200x150" alt="Producto 2">
+                    <h3>Producto 2</h3>
+                    <p>Descripción breve del producto.</p>
+                    <p class="price">$29.99</p>
+                </article>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container2">
+            <div class="logo2">
+                <img src="imagenes/skull.webp" width="100" height="100" >
+            </div>
+            <div class="columnas">
+                <div class="columna">
+                 
+                    <h4>COLABORACIONES</h4>
+                    <ul>              
+                      <li><a href="#"></a></li>
+                      <li><a href="#">Larva</a></li>
+                      <li><a href="#">Sayab Centro deportivo</a></li>
+                    </ul>
+                </div>
+    
+                <div class="columna">
+                  <h4>GRUPOS SOCIALES</h4>
+                    <ul>            
+                      <li><a href="#">Viva la rock</a></li>
+                      <li><a href="#">Club Alpino</a></li>
+                      <li><a href="#">La beta chica</a></li>
+                    </ul>
+                </div>
+    
+                <div class="columna">
+                  <h4>MARCAS PRINCIPALES</h4>
+                  <ul>
+                    <li><a href="#">Petzel Mexico</a></li>
+                    <li><a href="#">The north face </a></li>
+                    <li><a href="#">Arterix</a></li>
+                    <li><a href="#">Black dimond</a></li>
+                    <li><a href="#">La sportiva</a></li>
+                  </ul>
+              </div>
+                
+            </div>
+            <div class="redes-sociales">
+              <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+              <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+              <a href="#"><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
