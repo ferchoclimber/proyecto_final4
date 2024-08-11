@@ -1,0 +1,256 @@
+/* styles/Home.module.css */
+
+.header {
+    background-color: #222;
+    padding: 5px 0;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    flex: 1;
+    margin-left: 5px;
+}
+
+.luckiestGuy {
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav ul li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.nav a {
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.nav a:hover {
+    background-color: #444;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    list-style: none;
+    min-width: 160px;
+}
+
+.submenu li {
+    display: block;
+}
+
+.nav li:hover .submenu {
+    display: block;
+}
+
+.searchIcon {
+    flex: 1;
+    text-align: right;
+}
+
+.searchIcon input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.searchIcon button {
+    background-color: #555;
+    border: none;
+    color: #f1f1f1;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.searchIcon button:hover {
+    background-color: #666;
+}
+
+.hero {
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #444;
+    padding: 40px 0;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carouselInner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carouselItem {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carouselItem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carouselControlPrev,
+.carouselControlNext {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.carouselControlPrev {
+    left: 10px;
+}
+
+.carouselControlNext {
+    right: 10px;
+}
+
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.productItem {
+    background-color: #555;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.productItem img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.footer {
+    background-color: rgb(58, 60, 61);
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.columnas {
+    display: flex;
+}
+
+.columna {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.columna h4 {
+    color: #fff;
+}
+
+.columna ul {
+    list-style: none;
+    padding: 0;
+}
+
+.columna ul li {
+    margin-bottom: 5px;
+}
+
+.redesSociales a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.redesSociales a:hover {
+    color: whitesmoke;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .logo, .searchIcon {
+        flex: 1;
+        text-align: center;
+    }
+    .nav {
+        flex: 1;
+        justify-content: flex-start;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .searchIcon input[type="text"] {
+        width: 80%;
+    }
+    .searchIcon button {
+        margin-top: 5px;
+    }
+    .productItem {
+        width: 100%;
+        max-width: 300px;
+    }
+}
